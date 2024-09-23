@@ -1,0 +1,2 @@
+#!/bin/bash
+tr -d "\s+-.+" | uniq -c | sort | tr -d " " | tr -d '0123456789'
