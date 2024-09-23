@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Rda | wc -w
+find ./ -type d -name "*" | wc -l
