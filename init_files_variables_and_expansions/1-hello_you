@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "hello MyUser" # since `echo "hello $(id -un)"` always says 'hello root'! same as $(whoami) and it's fault only in the checker!
+echo "hello $USER"
