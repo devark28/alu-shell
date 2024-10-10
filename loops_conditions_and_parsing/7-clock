@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# a script to prints hours and minutes
+h=0
+m=1
+while ((h <= 12)); do
+    echo "Hour: $h"
+    while ((m <= 59)); do
+        echo $m
+        ((m++))
+    done
+    ((h++))
+done
