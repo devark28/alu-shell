@@ -2,5 +2,5 @@
 # a script to print "Best school" 10 times
 files=$(ls)
 for f in $files; do
-    echo "$f" | tr -d "\d-"
+    echo "$f" | cut -d "-" -f 2
 done
