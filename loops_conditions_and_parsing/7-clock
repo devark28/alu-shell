@@ -3,7 +3,7 @@
 h=0
 m=1
 while ((h <= 12)); do
-    echo "Hour: $h"
+    echo "Hou: $h"
     while ((m <= 59)); do
         echo $m
         ((m++))
