@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# a script to print "Best school" 10 times
+# a script to print files names
 files=$(ls)
 for f in $files; do
     echo "$f" | cut -d "-" -f 2
