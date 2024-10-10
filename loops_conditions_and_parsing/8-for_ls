@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# a script to print "Best school" 10 times
+files=$(ls)
+for f in files; do
+
+done
