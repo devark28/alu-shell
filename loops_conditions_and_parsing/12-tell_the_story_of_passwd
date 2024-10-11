@@ -2,7 +2,7 @@
 # a script to print a story
 lines=$(cat /etc/passwd)
 
-whileIFS= read -r ln; do
+while IFS= read -r ln; do
     # USERNAME=$($ln | cut -d ':' -f 1)
     # PASSWORD=$($ln | cut -d ':' -f 2)
     # USER_ID=$($ln | cut -d ':' -f 3)
