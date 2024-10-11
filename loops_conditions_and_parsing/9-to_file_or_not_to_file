@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # a script to print information about the school file
 file="school"
-if [ -f $file ] && [ ! -d $file ]; then
+if [ -f $file ]; then
     echo "school file exists"
-    if [ -z "$(cat $file)" ]; then
+    if [ ! -d $file ] && [ -z "$(cat $file)" ]; then
         echo "school file is empty"
     else
         echo "school file is not empty"
