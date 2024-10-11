@@ -2,6 +2,6 @@
 # a script to print certain fields
 lines=$(cat /etc/passwd)
 
-for ln in $lines; do
+while read -r ln; do
     cut "${ln}" -d ':' -f 1,3,6
-done
+done < "$lines"
