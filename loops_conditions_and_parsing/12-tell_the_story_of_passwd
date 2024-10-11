@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# a script to print a story
+
+lines=$(cat /etc/passwd)
+
+while read $ln; do
+    USERNAME=$(cut -d ':' -f 1)
+    PASSWORD=$(cut -d ':' -f 2)
+    USER_ID=$(cut -d ':' -f 3)
+    GROUP_ID=$(cut -d ':' -f 4)
+    USER_ID_INFO=$(cut -d ':' -f 5)
+    HOME_DIRECTORY=$(cut -d ':' -f 6)
+    COMMAND_SHELL=$(cut -d ':' -f 7)
+    echo "The user $USERNAME is part of the $GROUP_ID gang, lives in $HOME_DIRECTORY and rides $COMMAND_SHELL. $USER_ID's place is protected by the passcode $PASSWORD, more info about the user here: $USER_ID_INFO"
+done < "$lines"
