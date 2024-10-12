@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # a script to print parsed logs
 
-awk 'printf $1' apache-access.log
+awk 'printf $2' apache-access.log
