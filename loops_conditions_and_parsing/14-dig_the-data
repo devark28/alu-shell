@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # a script to print parsed logs
 
-awk '$9 { printf NR " " $1 " " $9 "\n";};' apache-access.log | sort -r
+awk '{ printf $1 " " $9 "\n";};' apache-access.log | awk '{count[$0]++}; END {for (combo in count) count[combo] " " combo}' | sort -r
