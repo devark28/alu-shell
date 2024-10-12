@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
 # a script to print parsed logs
+
+awk -F ':' "{}" apache-access.log
