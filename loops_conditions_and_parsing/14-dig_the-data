@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # a script to print parsed logs
 
-awk '{ if (array[$9] > 0) array[$9] += 1; else array[$9] = 1; printf array[$9] " " $1 " " $9 "\n";};' apache-access.log
+# awk '/$9/ { if (array[$9] > 0) array[$9] += 1; else array[$9] = 1; printf array[$9] " " $1 " " $9 "\n";};' apache-access.log
+awk '{printf $1 " " $9 "\n"}' apache-access.log | awk '/$1/ { print NR " " $0}'
