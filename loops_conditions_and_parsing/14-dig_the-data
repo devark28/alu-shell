@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # a script to print parsed logs
 
-awk '/$9/ { printf NR " " $1 " " $9 "\n";};' apache-access.log
+awk '/\$9/ { printf NR " " $1 " " $9 "\n";};' apache-access.log
