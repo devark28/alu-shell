@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# a script to manage a process
+
+case $1 in
+    start)
+        ./manage_my_process &
+        ps -x | pgrep -f './manage_my_process' >> /var/run/my_process.pid
+        echo "manage_my_process started";;
+    stop)
+        kill "$(tr '\n' ' ' < /var/run/my_process.pid)"
+        rm /var/run/my_process.pid
+        echo "manage_my_process stopped";;
+    restart)
+        kill "$(tr '\n' ' ' < /var/run/my_process.pid)"
+        rm /var/run/my_process.pid
+        ./manage_my_process &
+        ps -x | pgrep -f './manage_my_process' >> /var/run/my_process.pid
+        echo "manage_my_process restarted";;
+    default)
+        echo "Usage: manage_my_process {start|stop|restart}";;
+esac

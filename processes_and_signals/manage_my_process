@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# a script to write to file
+
+while true; do
+    echo 'I am alive!'
+    sleep 2
+done
