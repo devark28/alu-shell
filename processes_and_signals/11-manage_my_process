@@ -13,13 +13,13 @@ case $1 in
         echo "manage_my_process started";;
     stop)
         if [[ -f '/var/run/my_process.pid' ]]; then
-            kill "$(cat /var/run/my_process.pid)" || { echo "Failed to stop process"; exit 1; }
+            kill "$(cat /var/run/my_process.pid)"
         fi
         rm /var/run/my_process.pid
         echo "manage_my_process stopped";;
     restart)
         if [[ -f '/var/run/my_process.pid' ]]; then
-            kill "$(cat /var/run/my_process.pid)" || { echo "Failed to stop process"; exit 1; }
+            kill "$(cat /var/run/my_process.pid)"
         fi
         rm /var/run/my_process.pid
         ./manage_my_process &
