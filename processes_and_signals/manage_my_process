@@ -2,6 +2,6 @@
 # a script to write to file
 
 while true; do
-    echo 'I am alive!'
+    echo 'I am alive!' >> /tmp/my_process
     sleep 2
 done
