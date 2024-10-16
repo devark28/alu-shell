@@ -20,6 +20,6 @@ case $1 in
         ./manage_my_process &
         echo "$!" >> /var/run/my_process.pid
         echo "manage_my_process restarted";;
-    default)
+    else)
         echo "Usage: manage_my_process {start|stop|restart}";;
 esac
